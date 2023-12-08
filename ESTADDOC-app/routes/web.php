@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BaseDedatos;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\controladorVistas;
 /*
@@ -13,7 +14,7 @@ use App\Http\Controllers\controladorVistas;
 |
 */
 
-Route::get('/VER', [controladorVistas::class,'mostrarVistaconsultar'])->name('consultarr');
+Route::get('/VER', [controladorVistas::class,'index'])->name('consultarr');
 
 Route::get('/VR', [controladorVistas::class,'mostrarVistaeditar'])->name('editarr');
 
