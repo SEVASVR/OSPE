@@ -24,7 +24,8 @@
             <button type="button" class="btn btn-info">CONSULTAR</button>
       </div>  
         @foreach ($documentos as $documento)
-          <h1>{{$documento ->estado}}</h1>
+          <p>{{$documento ->documento}}</p>
+          <p>{{$documento->estado}}</p>
         @endforeach
 </body>
 </html>
