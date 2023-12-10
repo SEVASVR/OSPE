@@ -13,8 +13,8 @@ class controladorVistas extends Controller
         return view('foliover',['documentos'=>$tabla]);
     }
 
-    public function verSolouno(){
-        $documentos = Document::get();
+    public function verSolouno($documento){
+        $documentos = Document::find($documento);
         return view('consu',['documentos'=> $documentos]);
     }
 
