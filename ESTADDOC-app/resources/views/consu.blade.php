@@ -8,9 +8,6 @@
 </head>
 <body>
     <H1>FUNCIONO</H1>
-    @foreach ($documentos as $documento)
-    <p>{{$documento ->documento}}</p>
-    <p>{{$documento->estado}}</p>
-  @endforeach
+<h1>{{$documentos ->estado}}</h1>
 </body>
 </html>

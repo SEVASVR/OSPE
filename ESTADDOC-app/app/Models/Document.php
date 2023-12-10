@@ -10,4 +10,5 @@ class Document extends Model
     use HasFactory;
 
     protected $table = 'doc';
+    protected $primaryKey = 'documento';
 }
