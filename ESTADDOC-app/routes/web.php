@@ -17,6 +17,7 @@ Route::get('/VER', [controladorVistas::class,'mostrarVistaconsultar'])->name('co
 
 Route::get('/VR', [controladorVistas::class,'mostrarVistaeditar'])->name('editarr');
 
+Route::get('/CONSULTAR',[controladorVistas::class,'verSolouno']);
 
 Route::get('/', function () {
     return view('welcome');

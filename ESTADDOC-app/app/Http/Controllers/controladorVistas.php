@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\Models\Document;
 
 class controladorVistas extends Controller
 {
@@ -10,6 +11,11 @@ class controladorVistas extends Controller
     {
         $tabla = DB::table('doc')->get();
         return view('foliover',['documentos'=>$tabla]);
+    }
+
+    public function verSolouno(){
+        $documentos = Document::get();
+        return view('consu',['documentos'=> $documentos]);
     }
 
     public function mostrarVistaeditar()
