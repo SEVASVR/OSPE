@@ -1,13 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    @vite(['resources/css/app.scss','resources/js/app.js'])
+    <title>SEBAS</title>
 </head>
+
+
 <body>
-    <H1>FUNCIONO</H1>
-<h1>{{$documentos ->estado}}</h1>
+    <nav class="navbar navbar-light bg-light">
+        <form class="container-fluid justify-content-start">
+            <a href="{{route('consultarr')}}"><button id="consultar" class="btn btn-info" type="button">CONSULTAR </button></a>
+            <a href="{{route('editarr')}}"><button id ="cerrar" class="btn btn-info" type="button">CERRAR</button></a>
+        </form>
+      </nav>
+      <div class ="principal">
+            <h1>SEBAS</h1>
+            <label for="">FOLIO</label>
+            <input type="text" class="input">
+            <label for="">CEDULA</label>
+            <input type="text" id="input">
+            <button type="submit" class="btn btn-info">CONSULTAR</button>
+      </div>  
+      <h1>{{$documentos ->estado}}</h1>
+      <h1>{{$documentos ->tipo}}</h1>
+      <h1>{{$documentos ->id}}</h1>
 </body>
 </html>

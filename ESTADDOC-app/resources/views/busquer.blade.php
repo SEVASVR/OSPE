@@ -17,18 +17,14 @@
       </nav>
       <div class ="principal">
             <h1>SEBAS</h1>
-            <form method="post" action="/CONSULTAR">
-              @csrf
-              <label for="documento">TIPO DE DOCUMENTO</label>
-              <input type="text" class="input" name="documento" required>
-              <!--<label for="consull">NUMERO DE DOCUMENTO</label>
-              <input type="text" id="input" name="consull">-->
-              <button type="submit" class="btn btn-info">CONSULTAR</button>
-          </form>
-      </div>  
-        @foreach ($documentos as $documento)
-          <p>{{$documento ->documento}}</p>
-          <p>{{$documento->estado}}</p>
-        @endforeach
+            <label for="">FOLIO</label>
+            <input type="text" class="input">
+            <label for="">CEDULA</label>
+            <input type="text" id="input">
+            <button type="submit" class="btn btn-info">CONSULTAR</button>
+      </div> 
+      @foreach($resultados as $resultado)
+      <h1>{{$resultado->estado}}</h1>
+      @endforeach
 </body>
 </html>

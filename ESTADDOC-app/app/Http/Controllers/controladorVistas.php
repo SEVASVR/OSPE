@@ -18,6 +18,13 @@ class controladorVistas extends Controller
         return view('consu',['documentos'=> $documentos]);
     }
 
+    public function buscar(Request $request){
+        $documento = $request->input('documento');
+        $resultados = Document::where('documento',$documento)->get();
+
+        return view('busquer',['resultados'=>$resultados]);
+    }
+
     public function mostrarVistaeditar()
     {
         return view('folioedit');

@@ -17,7 +17,11 @@ Route::get('/VER', [controladorVistas::class,'mostrarVistaconsultar'])->name('co
 
 Route::get('/VR', [controladorVistas::class,'mostrarVistaeditar'])->name('editarr');
 
+Route::post('/CONSULTAR',[controladorVistas::class,'buscar']);
+
 Route::get('/CONSULTAR/{documento}',[controladorVistas::class,'verSolouno']);
+
+
 
 Route::get('/', function () {
     return view('welcome');
